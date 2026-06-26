@@ -1,0 +1,19 @@
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DHZ000009eR4L',
+				'Test_Chat_Web',
+				'https://nacao--devgiovann.sandbox.my.site.com/ESWTestChatWeb1782477757511',
+				{
+					scrt2URL: 'https://nacao--devgiovann.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://nacao--devgiovann.sandbox.my.site.com/ESWTestChatWeb1782477757511/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
