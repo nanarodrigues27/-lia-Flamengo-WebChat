@@ -3,7 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salesforce Web Chat Test</title>
+    <title>Teste Salesforce Chat</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,.15);
+            text-align: center;
+            max-width: 500px;
+        }
+
+        h1 {
+            color: #0176d3;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .status {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #0176d3;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Teste do Salesforce Chat</h1>
+
+        <p>
+            Se tudo estiver configurado corretamente, o botão de chat aparecerá
+            automaticamente no canto inferior direito da tela.
+        </p>
+
+        <div class="status">
+            Aguardando carregamento...
+        </div>
+    </div>
 
     <script type="text/javascript">
         function initEmbeddedMessaging() {
@@ -29,66 +91,6 @@
         src="https://nacao--devgi.sandbox.my.site.com/ESWChatTestDevGi1783618225006/assets/js/bootstrap.min.js"
         onload="initEmbeddedMessaging()">
     </script>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #f4f6f9;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .container {
-            max-width: 550px;
-            width: 90%;
-            background: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,.1);
-            text-align: center;
-        }
-
-        h1 {
-            color: #0176d3;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .status-badge {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 10px 18px;
-            background: #e3f2fd;
-            color: #0176d3;
-            border-radius: 20px;
-            font-weight: bold;
-        }
-    </style>
-</head>
-
-<body>
-
-    <div class="container">
-        <h1>Ambiente de Teste</h1>
-
-        <p>
-            O Embedded Messaging do Salesforce está configurado nesta página.
-            Após o carregamento, o botão de chat deverá aparecer automaticamente
-            no canto inferior direito.
-        </p>
-
-        <div class="status-badge">
-            ✅ Pronto para Conexão
-        </div>
-    </div>
 
 </body>
 </html>
