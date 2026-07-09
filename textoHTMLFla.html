@@ -4,82 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salesforce Web Chat Test</title>
+
+    <script type="text/javascript">
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = "en_US";
+
+                embeddedservice_bootstrap.init(
+                    "00DHZ000009sBZB",
+                    "ChatTest_DevGi",
+                    "https://nacao--devgi.sandbox.my.site.com/ESWChatTestDevGi1783618225006",
+                    {
+                        scrt2URL: "https://nacao--devgi.sandbox.my.salesforce-scrt.com"
+                    }
+                );
+            } catch (err) {
+                console.error("Error loading Embedded Messaging:", err);
+            }
+        }
+    </script>
+
+    <script
+        type="text/javascript"
+        src="https://nacao--devgi.sandbox.my.site.com/ESWChatTestDevGi1783618225006/assets/js/bootstrap.min.js"
+        onload="initEmbeddedMessaging()">
+    </script>
+
     <style>
-        /* Estilização básica para o ambiente de teste */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f6f9;
-            color: #333;
             margin: 0;
             padding: 0;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            background: #f4f6f9;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         }
 
         .container {
-            text-align: center;
-            background: #ffffff;
+            max-width: 550px;
+            width: 90%;
+            background: #fff;
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,.1);
+            text-align: center;
         }
 
         h1 {
-            color: #0176d3; /* Cor padrão do Salesforce */
+            color: #0176d3;
             margin-bottom: 20px;
         }
 
         p {
-            font-size: 16px;
-            line-height: 1.5;
-            color: #666;
+            color: #555;
+            line-height: 1.6;
         }
 
         .status-badge {
             display: inline-block;
-            margin-top: 20px;
-            padding: 8px 16px;
-            background-color: #e1f5fe;
-            color: #0288d1;
+            margin-top: 25px;
+            padding: 10px 18px;
+            background: #e3f2fd;
+            color: #0176d3;
             border-radius: 20px;
             font-weight: bold;
-            font-size: 14px;
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
         <h1>Ambiente de Teste</h1>
-        <p>O chat do Salesforce está configurado nesta página. O botão ou balão de atendimento deve aparecer automaticamente no canto inferior direito.</p>
-        <div class="status-badge">Pronto para Conexão</div>
+
+        <p>
+            O Embedded Messaging do Salesforce está configurado nesta página.
+            Após o carregamento, o botão de chat deverá aparecer automaticamente
+            no canto inferior direito.
+        </p>
+
+        <div class="status-badge">
+            ✅ Pronto para Conexão
+        </div>
     </div>
-
-    <script type='text/javascript'>
-        function initEmbeddedMessaging() {
-            try {
-                // Define o idioma do chat (ajuste para 'pt_BR' se necessário)
-                embeddedservice_bootstrap.settings.language = 'en_US'; 
-
-                embeddedservice_bootstrap.init(
-                    '00DHZ000009eR4L',
-                    'Test_Chat_Web',
-                    'https://nacao--devgiovann.sandbox.my.site.com/ESWTestChatWeb1782477757511',
-                    {
-                        scrt2URL: 'https://nacao--devgiovann.sandbox.my.salesforce-scrt.com'
-                    }
-                );
-            } catch (err) {
-                console.error('Error loading Embedded Messaging: ', err);
-            }
-        };
-    </script>
-    
-    <script type='text/javascript' src='https://nacao--devgiovann.sandbox.my.site.com/ESWTestChatWeb1782477757511/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
 </body>
 </html>
